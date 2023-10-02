@@ -17,3 +17,5 @@ const subtract = (a, ...b) => {
 const trySubtract = subtract(4, 2);
 console.log(trySubtract);
 console.log("Hello");
+
+// Trying
