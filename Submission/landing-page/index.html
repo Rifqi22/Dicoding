@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!------------------------------------------- Head ------------------------------------------------------>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kota Bogor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <!------------------------------------------- Body ------------------------------------------------------>
+  <body>
+    <!-------------- Header --------------->
+    <header>
+      <!-- Main Header -->
+      <div class="main_header">
+        <a href="index.html">
+          <img
+            src="image/kota-bogor-logo.png"
+            alt="Logo Kota Bogor"
+            class="logo"
+          />
+        </a>
+        <h1>Kota Bogor</h1>
+      </div>
+      <!-- Navigation Bar -->
+
+      <nav>
+        <ul class="ul_nav_bar">
+          <li class="li_nav_bar">
+            <a href="index.html" target=""> Home </a>
+          </li>
+          <li class="li_nav_bar">
+            <a href="wisata.html" target=""> Wisata </a>
+          </li>
+          <li class="li_nav_bar">
+            <a href="about.html" target=""> About </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-------------- Main --------------->
+    <main>
+      <div class="content">
+        <div class="sub-content1">
+          <!-- Profil  -->
+          <article>
+            <h1>Arti Lambang</h1>
+            <img src="image/kota-bogor-logo.png" alt="" class="logo-image" />
+            <p>Arti Tiap Lambang:</p>
+            <ol>
+              <li>
+                Kiri atas, Burung Garuda kuning emas merupakan Lambang Negara.
+              </li>
+              <li>
+                Kanan atas, di Kota Bogor terletak Istana Bogor yang dinyatakan
+                dengan lukisan istana Warna Perak.
+              </li>
+              <li>
+                Kiri bawah, Kota Bogor, tak dapat dilepaskan dari bayangan
+                Gunung Salak dilukiskan dalam simbol gunung dengan empat buah
+                puncaknya.
+              </li>
+              <li>
+                Kota Bogor adalah suatu pusaka dari Kerajaan Pajajaran, hal ini
+                dilukiskan dengan bentuk Kujang.
+              </li>
+            </ol>
+            <!-- Visi Misi -->
+            <h2>Visi & Misi</h2>
+            <h3>Visi</h3>
+            <p>
+              <q><i>Mewujudkan Kota Bogor sebagai Kota Ramah Keluarga</i></q>
+            </p>
+            <h3>Misi</h3>
+            <ol>
+              <li>Mewujudkan Kota yang Sehat;</li>
+              <li>Mewujudkan Kota yang Cerdas;</li>
+              <li>Mewujudkan Kota yang Sejahtera.</li>
+            </ol>
+          </article>
+          <!-- Geografis -->
+          <article>
+            <h1>Letak Geografis</h1>
+            <img
+              src="image/peta-bogor.webp"
+              alt=""
+              class="featured-image map-image"
+            />
+            <p>
+              Secara geografis Kota Bogor terletak di antara 106’ 48’ BT dan 6’
+              26’ LS, kedudukan geografis Kota Bogor di tengah-tengah wilayah
+              Kabupaten Bogor serta lokasinya sangat dekat dengan Ibukota
+              Negara, merupakan potensi yang strategis bagi perkembangan dan
+              pertumbuhan ekonomi dan jasa, pusat kegiatan nasional untuk
+              industri, perdagangan, transportasi, komunikasi, dan pariwisata.
+            </p>
+          </article>
+          <article>
+            <!-- ======= Gallery Section ======= -->
+            <section id="about" class="webgis">
+              <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                  <h2>Bogor Gallery</h2>
+                  <p>  <b>Click to Explore!</b></p>
+                </div>
+              </div>
+              <!-- Container for the image gallery -->
+              <div class="container gallery-container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 5</div>
+                  <img
+                    src="image/gallery/istana-bogor.jpeg"
+                    style="width: 100%"
+                  />
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">2 / 5</div>
+                  <img
+                    src="image/gallery/lawang-salapan.jpeg"
+                    style="width: 100%"
+                  />
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">3 / 5</div>
+                  <img
+                    src="image/gallery/tugu-kujang.jpeg"
+                    style="width: 100%"
+                  />
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">4 / 5</div>
+                  <img
+                    src="image/gallery/alun-alun.jpeg"
+                    style="width: 100%"
+                  />
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">5 / 5</div>
+                  <img
+                    src="image/gallery/gunung-salak.jpeg"
+                    style="width: 100%"
+                  />
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img
+                      class="dots cursor"
+                      src="image/gallery/istana-bogor.jpeg"
+                      style="width: 100%"
+                      onclick="currentSlide(1)"
+                      alt="Istana Bogor"
+                    />
+                  </div>
+                  <div class="column">
+                    <img
+                      class="dots cursor"
+                      src="image/gallery/lawang-salapan.jpeg"
+                      style="width: 100%"
+                      onclick="currentSlide(2)"
+                      alt="Lawang Salapan"
+                    />
+                  </div>
+                  <div class="column">
+                    <img
+                      class="dots cursor"
+                      src="image/gallery/tugu-kujang.jpeg"
+                      style="width: 100%"
+                      onclick="currentSlide(3)"
+                      alt="Tugu Kujang"
+                    />
+                  </div>
+                  <div class="column">
+                    <img
+                      class="dots cursor"
+                      src="image/gallery/alun-alun.jpeg"
+                      style="width: 100%"
+                      onclick="currentSlide(4)"
+                      alt="Alun Alun"
+                    />
+                  </div>
+                  <div class="column">
+                    <img
+                      class="dots cursor"
+                      src="image/gallery/gunung-salak.jpeg"
+                      style="width: 100%"
+                      onclick="currentSlide(5)"
+                      alt="Gunung Salak"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End About Section -->
+          </article>
+        </div>
+        <!-- Aside -->
+        <aside class="aside">
+          <!-- Profile -->
+          <article class="profile">
+            <h1>Profil Diri</h1>
+            <img
+              id="profile_photo"
+              src="image/photo_profile.jpg"
+              alt="Photo Profile"
+            />
+            <!-- Profile Label -->
+            <div class="subbox_profile">
+              <div id="label1">
+                <p><b> Nama </b></p>
+                <p><b> NIM </b></p>
+                <p><b> Jurusan </b></p>
+                <p><b> Email </b></p>
+              </div>
+              <div id="label2">
+                <p>M. Rifqi Naufal A</p>
+                <p>2001068</p>
+                <p>Sains Informasi Geografi</p>
+                <p>rifqinaufalfayyadh@gmail.com</p>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </main>
+    <!-------------- Footer --------------->
+    <footer>
+      <p>Find me on social media.</p>
+      <div class="socmed">
+        <a
+          target="_blank"
+          href="https://www.instagram.com/iqiiiiiiiiii/"
+          class="instagram"
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/rifqi.naufal.58760/"
+          class="facebook"
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/mochammadrifqinaufalalfayyadh/"
+          class="linkedin"
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>

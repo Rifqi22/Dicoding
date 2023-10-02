@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --background: #1b1b1b;
+  --second-background: #222222;
+  --profile-background: #555555a8;
+  --main: #15df8b;
+  --nav: #0f975e;
+  --secondary: #f4f4f4;
+  --label-act: #dddddd;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  line-height: 2em;
+}
+
+main {
+  height: 100%;
+}
+
+p {
+  color: var(--secondary);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--main);
+}
+
+article {
+  text-align: justify;
+}
+
+/* ----------------------------------- Body -------------------------------- */
+
+.main_header {
+  width: 100%;
+  height: 70vh;
+  background: var(--main);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--secondary) !important;
+  text-shadow: 0px 0px 10px #000000;
+  font-family: Verdana;
+  font-size: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Kota Bogor logo */
+.logo {
+  width: 150px;
+  text-align: center;
+  align-items: center;
+}
+
+/* Navigation Bar */
+.nav-container {
+  display: inline;
+}
+.ul_nav_bar {
+  background-color: var(--nav);
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+.li_nav_bar {
+  float: left;
+}
+.li_nav_bar a {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+.li_nav_bar:hover {
+  font-weight: bold;
+}
+
+/* ----------------------------------- Main -------------------------------- */
+/* content */
+.content {
+  margin: 1em;
+  display: flex;
+  flex-flow: row;
+  flex: 3;
+}
+
+.sub-content1 > article {
+  margin: 1em 0;
+  padding: 2em;
+  box-shadow: 0px 2px 5px 3px #080808;
+}
+
+ol {
+  color: var(--secondary);
+}
+
+/* ----------------------------------- Aside -------------------------------- */
+/* aside */
+.aside {
+  margin: 1em;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
+
+.aside > .profile {
+  padding: 1em;
+  box-shadow: 0px 2px 5px 3px #080808;
+  text-align: center;
+}
+
+/* Profile Photo */
+#profile_photo {
+  width: 200px;
+  object-position: center;
+  object-fit: cover;
+}
+
+/* Subbox profile */
+.subbox_profile {
+  display: flex;
+}
+
+.subbox_profile > div {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+#label1 {
+  flex: 1;
+}
+#label2 {
+  flex: 2;
+  text-align: left;
+  margin: 0 0 0 2px;
+}
+
+/* Picture in Home Page */
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.map-image {
+  max-height: 400px;
+  object-fit: contain;
+}
+.logo-image {
+  width: 20%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ----------------------------------- About -------------------------------- */
+/* Aside */
+.profile-about {
+  display: flex;
+  flex-flow: row;
+  margin: 1em;
+}
+
+.aside-profile {
+  flex: 1;
+  background-color: var(--second-background);
+  padding: 0px;
+  margin-right: 1em;
+  height: auto;
+  box-shadow: 0px 2px 5px 3px #080808;
+}
+
+/* Sub-subbox1 */
+.sub-subbox1 {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  background: url(image/profile-about.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -30px;
+  text-align: left;
+  justify-content: end;
+}
+
+.profile-text {
+  margin: 10px;
+  font-size: 24px;
+}
+
+/* Sub-subbox2 */
+.sub-subbox2 {
+  margin: 0;
+  padding: 0;
+}
+.subbox-profile {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 10px;
+}
+
+.subbox-profile > span > span {
+  display: block;
+  padding: 10px;
+}
+
+/* Icon for Aside */
+.univ {
+  background: url(icon/univ.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+}
+
+.home {
+  background: url(icon/home.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+}
+
+.email {
+  background: url(icon/email.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+}
+
+.tel {
+  background: url(icon/telephone.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+}
+
+/* Content */
+.content-profile {
+  flex: 2;
+  padding: 20px;
+  margin-left: 1em;
+  height: fit-content;
+  background-color: var(--background);
+  color: var(--main);
+  box-shadow: 0px 2px 5px 3px #080808;
+}
+
+.content-profile .main-title {
+  margin: 20px;
+  display: flex;
+  color: var(--main);
+}
+.content-profile h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.content-profile h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--secondary);
+}
+.content-profile h4 {
+  font-size: 14px;
+  font-weight: 300;
+}
+.content-profile p {
+  color: var(--secondary);
+}
+
+/* Icon for Profile Content*/
+.icon {
+  background: url(icon/square.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.calendar{
+  background: url(icon/calendar-green.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.education {
+  display: block;
+  flex-flow: column;
+  margin: 20px;
+  line-height: 20px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--secondary);
+  margin: 0 20px;
+  opacity: .5;
+}
+
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+
+/* Gallery Carousel */
+
+/* Container */
+.gallery-container {
+  background-color: #141414a1;
+  padding: 1em;
+  position: relative;
+}
+
+/* Button */
+.gallery-container .buskita-explore-btn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: 600;
+  background: var(--primary-color);
+  padding: 2em 3px;
+  text-decoration: none;
+  color: var(--main);
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: .2s;
+  letter-spacing: 2px;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 24px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  /* background-color: #222; */
+  padding: 2px 16px;
+  margin: 1em 0;
+  color: var(--secondary-color);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.dots {
+  opacity: 0.6;
+}
+
+.active,
+.dots:hover {
+  opacity: 1;
+}
+
+
+/* ----------------------------------- Footer -------------------------------- */
+
+/* Footer */
+footer {
+  margin-top: 4em;
+  height: 30vh;
+  background-color: var(--second-background);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: var(--main);
+}
+
+.socmed {
+  display: flex;
+  align-items: center;
+}
+
+footer a {
+  width: 2em;
+  height: 2em;
+}
+
+.instagram {
+  background: url(icon/instagram-green.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.facebook {
+  background: url(icon/facebook-green.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.linkedin {
+  background: url(icon/linkedin-green.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+/* Media Screen */
+@media screen and (max-width: 1000px) {
+  .content {
+    flex-flow: column nowrap;
+  }
+  .aside {
+    align-self: stretch;
+  }
+  .main_header{
+    background-size: auto;
+    height: 60vh;
+  }
+  h1, h2, h3, p, ol {
+    font-size: medium;
+  }
+  img {
+    max-height: 150px;
+    object-fit: contain;
+  }
+  #label1, #label2 {
+    flex: content;
+    text-align: center;
+  }
+  #label2 {
+    text-align: left;
+
+  }
+  #profile_photo {
+    min-height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  aside {
+    align-self: stretch;
+  }
+  .main_header{
+    background-size: auto;
+    height: 40vh;
+  }
+  h1, h2, h3, p, ol {
+    font-size: small;
+  }
+  img {
+    max-height: 100px;
+    object-fit: contain;
+  }
+}

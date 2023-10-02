@@ -1,0 +1,13 @@
+{
+  "name": "javascript_dicoding",
+  "version": "1.0.0",
+  "description": "Dicoding FEBE",
+  "main": "es6_modul_import.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node es6_modul_import.js"
+  },
+  "type": "module",
+  "author": "Rifqi",
+  "license": "ISC"
+}
