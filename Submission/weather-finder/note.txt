@@ -1,0 +1,25 @@
+Weather-finder
+
+Sumber API yang digunakan : https://openweathermap.org/
+
+API Key: 0d541c0955eaa3912220c9e95fb46b80 
+
+Contoh sampel API : https://api.openweathermap.org/data/2.5/weather?q=bogor&appid=0d541c0955eaa3912220c9e95fb46b80 
+
+Aplikasi Weather-Finder akan menampilkan informasi mengenai cuaca di berbagai Kota/Kabupaten cakupan seluruh dunia. Disini saya menggunakan format 'City' dalam filtering pencarian. Karena itu dalam fitur pencarian harap menginput nama kota secara lengkap (contoh: Bogor, BOGOR, Bandung, BANDUNG). 
+
+Secara kriteria sudah terpenuhi semua poinnya. 
+
+Lalu untuk Penilaian saya sudah menerapkan:
+
+-Tampilan yang menarik + sudah memberikan page yang responsive untuk ukuran layar handphone dan komputer.
+
+-Sudah menggunakan Package pihak-3 yakni Jquery, dan Moment yang dimanfaatkan untuk membuat fitur Jam.
+
+-Penulisan kode sudah rapi menggunakan Prettier
+
+-Pada Webpack menambahkan loader 'file-loader' yang berfungsi untuk menampilkan gambar Icon.
+
+
+
+CATATAN PENTING: Aplikasi weather-finder tidak dirancang untuk menampilkan banyak data dalam bentuk list. Namun hanya dapat menampilkan satu kota saja, karena untuk desain jangka panjang akan ditambahkan fungsi secara spasial atau menambahkan informasi lokasi melalui Service Map.

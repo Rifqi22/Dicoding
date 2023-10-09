@@ -4,18 +4,18 @@ class SearchBar extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: 'open'})
     }
 
-    connectedCallback(){
+    connectedCallbacks(){
         this.render();
-    };
+    }
 
-    get Value(){
-        return this.shadowDOM.querySelector('#searchElement').value;
-    };
+    get value(){
+        return this.shadowDOM.querySelector(`#searchElement`).value;
+    }
 
     set clickEvent(event){
         this._clickEvent = event;
         this.render();
-    };
+    }
 
     render(){
         this.shadowDOM.innerHTML = `
@@ -74,7 +74,7 @@ class SearchBar extends HTMLElement {
 
         <div class="search-box">
             <h2>Search City</h2>
-            <input id="searchElement" placeholder="Which city do you want to see" type="search">
+            <input id="searchElement" placeholder="Search for weather in a city ..." type="search">
             <button id="searchButtonElement" type="submit">Search</button>
         </div>
         `;

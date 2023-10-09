@@ -1,0 +1,9 @@
+import '../component/image/Clouds.png';
+import '../component/image/clear.png';
+import '../component/image/drizzle.png';
+import '../component/image/humidity.png';
+import '../component/image/mist.png';
+import '../component/image/rain.png';
+import '../component/image/search.png';
+import '../component/image/snow.png';
+import '../component/image/wind.png';
