@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 80%;
+  max-width: 800px;
+  margin: 32px auto;
+}
+
+drink-list {
+  display: block;
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px;
+  /* align-items: ; */
+}
+
+.clock {
+  width: 100%;
+  padding: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.clock .time {
+  font-size: 64px;
+  margin: 0 auto;
+}
+ 
+.clock .date {
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+
