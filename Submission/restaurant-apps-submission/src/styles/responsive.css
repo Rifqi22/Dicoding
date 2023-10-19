@@ -1,0 +1,59 @@
+
+
+@media screen and (min-width: 450px){
+    .headline__content {
+        padding: 16px 16px;
+    }
+
+    .headline__title{
+        font-size: 28px;
+    }
+
+    .headline__description{
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 500px){
+    .header__menu {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 700px){
+    restaurant-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 10px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .nav_list{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+
+    .headline__content{
+        padding: 16px 32px;
+    }
+
+    restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    restaurant-list{
+        margin: 0 2em;
+
+    }
+}
