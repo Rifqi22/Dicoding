@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #fff45e;
+  --secondary-color:  #fff;
+  --tertiary-color: #1f1f1f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 90%;
+  margin: 32px auto;
+}
+
+.restaurant-main-title {
+  text-align: center;
+  margin: 40px 0;
+  font-weight: lighter;
+}
+
+app-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+}
+
+hero-bar{
+  height: 50vh;
+
+}
+
+
+img {
+  display: block;
+}
+
+.restaurant-container{
+  display: grid;
+  gap: 1em;
+  margin: 2em auto;
+}
+
+/* Restaurant */
+.restaurant-item {
+  display: block;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.restaurant-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.restaurant-info {
+  padding: 32px;
+}
+
+
+.restaurant-info > .name{
+  font-size: 32px;
+  margin-bottom: 1em;
+  color: var(--secondary-color);
+}
+
+.restaurant-info > .name:hover{
+  color: gray;
+  transition: 0.3s ;
+}
+
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.rating p {
+  font-size: 20px;
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  background-image: url('../public/images/heros/star.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+.restaurant-info a {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-info .city {
+  font-size: 20px;
+  color: grey;
+  margin-bottom: 2em;
+}
+
+.restaurant-info .description {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10; /* number of lines to show */
+  line-height: 2.5em;
+  font-size: 20px;
+}
+
+
+@media screen and (min-width: 650px){
+
+  .restaurant-info {
+      padding: 2em;
+  }
+
+  .restaurant-info .name{
+      font-size: 1.5em;
+  }
+
+  .restaurant-info .description{
+      font-size: 1em;
+      line-height: 2em;
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 4em;
+  min-height: 30vh;
+  height: min-content;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: var(--secondary-color);
+  margin-bottom: 2em;
+}
+
+.socmed {
+  display: flex;
+  align-items: center;
+}
+
+.socmed a{
+  margin: 0 20px;
+  width: 2em;
+  height: 2em;
+  width: 50px;
+  height: 50px;
+}
+
+
+.instagram {
+  background: url('../public/images/heros/icon/instagram.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.facebook {
+  background: url('../public/images/heros/icon/facebook.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.linkedin {
+  background: url('../public/images/heros/icon/linkedin.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
