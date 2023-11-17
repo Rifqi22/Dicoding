@@ -1,17 +1,17 @@
-class AppBar extends HTMLElement{
-    constructor(){
-        super();
-        this.shadowDOM = this.attachShadow({mode: 'open'})
-    };
+class AppBar extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
+  }
 
-    connectedCallback(){
-        this.render();
-        this.drawerFunction();
-        this.navbarFunction();
-    };
+  connectedCallback() {
+    this.render();
+    this.drawerFunction();
+    this.navbarFunction();
+  }
 
-    render(){
-        this.shadowDOM.innerHTML =`
+  render() {
+    this.shadowDOM.innerHTML = `
         <style>
             :root {
                 --primary-color: #fff45e;
@@ -238,48 +238,45 @@ class AppBar extends HTMLElement{
 
 
         `;
-    }
+  }
 
-    navbarFunction(){
-        const home = this.shadowDOM.querySelector('#home');
-        const favorite = this.shadowDOM.querySelector('#favorite');
+  navbarFunction() {
+    const home = this.shadowDOM.querySelector('#home');
+    const favorite = this.shadowDOM.querySelector('#favorite');
 
-        home.addEventListener('click', function (event){
-            home.classList.toggle('active');
-            event.stopPropagation();
-            favorite.classList.remove('active');
-        });
+    home.addEventListener('click', (event) => {
+      home.classList.toggle('active');
+      event.stopPropagation();
+      favorite.classList.remove('active');
+    });
 
-        favorite.addEventListener('click', function (event){
-            favorite.classList.toggle('active');
-            event.stopPropagation();
-            home.classList.remove('active');
-        });
-    }
+    favorite.addEventListener('click', (event) => {
+      favorite.classList.toggle('active');
+      event.stopPropagation();
+      home.classList.remove('active');
+    });
+  }
 
-    drawerFunction(){
-        // Function to hide and show burger menu
-        const drawer = this.shadowDOM.querySelector('#drawer');
-        const menu = this.shadowDOM.querySelector('#menu');
-        const hero = document.querySelector('hero-bar');
-        const body = document.querySelector('body');
+  drawerFunction() {
+    // Function to hide and show burger menu
+    const drawer = this.shadowDOM.querySelector('#drawer');
+    const menu = this.shadowDOM.querySelector('#menu');
+    const hero = document.querySelector('hero-bar');
+    const body = document.querySelector('body');
 
-        menu.addEventListener('click', function (event){
-            drawer.classList.toggle('open');
-            event.stopPropagation();
-        });
+    menu.addEventListener('click', (event) => {
+      drawer.classList.toggle('open');
+      event.stopPropagation();
+    });
 
-        hero.addEventListener('click', function (){
-            drawer.classList.remove('open');
-        })
+    hero.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
 
-        body.addEventListener('click', function (){
-            drawer.classList.remove('open');
-        })
-
-    }
-
-
-};
+    body.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
+  }
+}
 
 customElements.define('app-bar', AppBar);
