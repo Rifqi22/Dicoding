@@ -29,10 +29,16 @@ class AppBar extends HTMLElement {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             }
             .title {
-                padding: 16px
                 font-size: 40px;
                 text-align: left;
-                margin-left: 20px
+                margin-left: 20px;
+            }
+            .title a{
+              text-decoration: none;
+              color: var(--secondary-color);
+            }
+            .title a:hover{
+              color: var(--primary-color);
             }
 
             .skip-link {
@@ -206,6 +212,14 @@ class AppBar extends HTMLElement {
                     font-size: 3em;
                     padding: 0;
                     margin: 20px 20px 0 20px;
+                    text-decoration: none;
+                }
+                .title a{
+                  text-decoration: none;
+                  color: var(--secondary-color);
+                }
+                .title a:hover{
+                  color: var(--primary-color);
                 }
                 #menu{
                     grid-column-start: 1;
@@ -225,13 +239,13 @@ class AppBar extends HTMLElement {
 
         <!-- HTML  -->
         <a href="#restaurant-list" class="skip-link">Go to Content</a>
-        <h1 class="title" tabindex="0"> El Food </h1>
+        <h1 class="title" tabindex="0"><a href="#/list-restaurants"> El Food </a></h1>
 
         <a id="menu" class="header__menu" href="#">☰</a>
         <nav id="drawer" class="nav">
           <ul class='nav__list'>
-            <li class="nav__item active" id="home"><a href='/index.html'>Home</a></li>
-            <li class="nav__item" id="favorite"><a href=#>Favorite</a></li>
+            <li class="nav__item active" id="home"><a href="#/list-restaurants">Home</a></li>
+            <li class="nav__item" id="favorite"><a href="#/like">Favorite</a></li>
             <li class="nav__item" id="about"><a href='https://rifqi22.github.io/rifqi-portofolio.github.io/' target='_blank'>About Us</a></li>
           </ul>
         </nav>

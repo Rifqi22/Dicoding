@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* Default Mobile Design <500px */
 :root {
   --primary-color: #fff45e;
   --secondary-color:  #fff;
@@ -8,6 +12,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -39,7 +44,6 @@ hero-bar{
 
 }
 
-
 img {
   display: block;
 }
@@ -57,6 +61,7 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
+  line-height: 2em;
 }
 
 .restaurant-img {
@@ -69,40 +74,27 @@ img {
 
 .restaurant-info {
   padding: 32px;
+
 }
 
 
 .restaurant-info > .name{
   font-size: 32px;
-  margin-bottom: 1em;
   color: var(--secondary-color);
 }
 
-.restaurant-info > .name:hover{
-  color: gray;
+.restaurant-info.name:hover{
+  color: var(--primary-color);
   transition: 0.3s ;
 }
-
-
 
 .rating {
   display: flex;
   align-items: center;
-  margin-bottom: 2em;
+  font-size: 30px;
 }
-
-.rating p {
-  font-size: 20px;
-}
-
-.star {
-  width: 50px;
-  height: 50px;
-  background-image: url('../public/images/heros/star.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin-right: 20px;
+.rating p{
+  margin-left: 10px;
 }
 
 .restaurant-info a {
@@ -113,35 +105,82 @@ img {
 .restaurant-info .city {
   font-size: 20px;
   color: grey;
-  margin-bottom: 2em;
+
 }
 
 .restaurant-info .description {
-  margin-top: 10px;
+
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10; /* number of lines to show */
-  line-height: 2.5em;
   font-size: 20px;
 }
 
+.support_data {
+  margin-top: 1em;
+}
 
-@media screen and (min-width: 650px){
+/* Review */
+.review {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.review-info {
+  padding: 32px;  
+}
 
-  .restaurant-info {
-      padding: 2em;
-  }
+.review_list {
+  display: flex;
+  flex-flow: column;
 
-  .restaurant-info .name{
-      font-size: 1.5em;
-  }
+}
 
-  .restaurant-info .description{
-      font-size: 1em;
-      line-height: 2em;
-  }
+.review_user_container{
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review_user {
+  width: 60%;
+  height: 60%;
+
+}
+
+.review_name {
+  margin-top: 0.5em;
+}
+
+
+
+
+/* Like Button */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -167,7 +206,7 @@ footer p {
 }
 
 .socmed a{
-  margin: 0 20px;
+  margin: 10px 20px;
   width: 2em;
   height: 2em;
   width: 50px;
@@ -176,19 +215,55 @@ footer p {
 
 
 .instagram {
-  background: url('../public/images/heros/icon/instagram.png');
+  background: url('../public/images/heros/icon/instagram-white.png');
   background-size: 100%;
   background-repeat: no-repeat;
+}
+.instagram:hover{
+  background-size: 80%;
+  transition: .3s;
 }
 
 .facebook {
-  background: url('../public/images/heros/icon/facebook.png');
+  background: url('../public/images/heros/icon/facebook-white.png');
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.facebook:hover{
+  background-size: 80%;
+  transition: .3s;
+}
 
 .linkedin {
-  background: url('../public/images/heros/icon/linkedin.png');
+  background: url('../public/images/heros/icon/linkedin-white.png');
   background-size: 100%;
   background-repeat: no-repeat;
+}
+.linkedin:hover{
+  background-size: 80%;
+  transition: .3s;
+}
+
+/* Subscribe Button */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 20px 20px;
+  background-color: var(--primary-color);
+  border: 1px solid #770000;
+  border-radius: 4px;
+ 
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--tertiary-color);
+ 
+  cursor: pointer;
+  transition: .15s ease-in-out;
+}
+ 
+.btn:hover {
+  background-color: #DB0000BB;
+}
+.btn:active {
+  background-color: #DB0000DD;
 }
