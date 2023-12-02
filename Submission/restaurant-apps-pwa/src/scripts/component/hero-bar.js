@@ -1,15 +1,15 @@
-class HeroBar extends HTMLElement{
-    constructor(){
-        super();
-        this.shadowDOM = this.attachShadow({mode: 'open'})
-    };
+class HeroBar extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
+  }
 
-    connectedCallback(){
-        this.render();
-    };
+  connectedCallback() {
+    this.render();
+  }
 
-    render(){
-        this.shadowDOM.innerHTML =`
+  render() {
+    this.shadowDOM.innerHTML = `
         <style>
 
             :host{
@@ -63,10 +63,7 @@ class HeroBar extends HTMLElement{
       </div>
 
         `;
-
-    }
-
-
-};
+  }
+}
 
 customElements.define('hero-bar', HeroBar);
