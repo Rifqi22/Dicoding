@@ -9,20 +9,21 @@
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
     <link rel="manifest" href="./app.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <title>Restaurant Apps</title>
   </head>
   <body>
   <header>
+    <a href="#mainContent" class="skip-link">Go to Content</a>
     <app-bar></app-bar>
     <hero-bar></hero-bar>
   </header>
-  <main id="mainContent">
+  <main id="mainContent" tabindex="0">
 
   </main>
   <footer>
-    <button id="subscribePushNotification" class="btn">Subscribe Push Notification</button>
-    <button id="unsubscribePushNotification" class="btn">Unsubscribe Push Notification</button>
+    <button id="subscribePushNotification" class="btn" tabindex="0">Subscribe Push Notification</button>
+    <button id="unsubscribePushNotification" class="btn" tabindex="0">Unsubscribe Push Notification</button>
     <p tabindex="0"> Copyright © 2023 - El Food</p>
     <p tabindex="0"> Dicoding Submission </p>
     <p tabindex="0"> Find me on social media.</p>

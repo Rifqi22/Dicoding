@@ -1,4 +1,3 @@
-
 class RestaurantItem extends HTMLElement {
   constructor() {
     super();

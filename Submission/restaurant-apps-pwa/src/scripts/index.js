@@ -2,8 +2,8 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
 
-import './component/hero-bar.js';
-import './component/app-bar.js';
+import './component/hero-bar';
+import './component/app-bar';
 // import main from './views/main.js';
 
 import swRegister from './utils/sw-register';
@@ -16,7 +16,6 @@ const app = new App({
   content: document.querySelector('#mainContent'),
 });
 
-
 window.addEventListener('hashchange', () => {
   app.renderPage();
 });
@@ -27,10 +26,10 @@ window.addEventListener('load', () => {
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
 
-  // Initialize footer tools
-  FooterToolsInitiator.init({
-    subscribeButton: document.querySelector('#subscribePushNotification'),
-    unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
-  });
+// Initialize footer tools
+FooterToolsInitiator.init({
+  subscribeButton: document.querySelector('#subscribePushNotification'),
+  unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
+});
 
 // document.addEventListener('DOMContentLoaded', main);

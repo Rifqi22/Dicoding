@@ -40,22 +40,6 @@ class AppBar extends HTMLElement {
             .title a:hover{
               color: var(--primary-color);
             }
-
-            .skip-link {
-                position: absolute;
-                top: -40px;
-                left: 50%;
-                font-style: italic;
-                background-color: #bf1722;
-                color: white;
-                padding: 8px;
-                z-index: 100;
-              }
-               
-              .skip-link:focus {
-                 top: 0;
-              }
-
               .header__menu{
                 font-size: 50px;
                 margin: 10px auto;
@@ -238,9 +222,8 @@ class AppBar extends HTMLElement {
         </style>
 
         <!-- HTML  -->
-        <a href="#restaurant-list" class="skip-link">Go to Content</a>
-        <h1 class="title" tabindex="0"><a href="#/list-restaurants"> El Food </a></h1>
 
+        <h1 class="title" tabindex="0"><a href="#/list-restaurants"> El Food </a></h1>
         <a id="menu" class="header__menu" href="#">☰</a>
         <nav id="drawer" class="nav">
           <ul class='nav__list'>

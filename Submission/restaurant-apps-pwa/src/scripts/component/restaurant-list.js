@@ -1,4 +1,4 @@
-import './restaurant-item.js';
+import './restaurant-item';
 
 class RestaurantList extends HTMLElement {
   constructor() {

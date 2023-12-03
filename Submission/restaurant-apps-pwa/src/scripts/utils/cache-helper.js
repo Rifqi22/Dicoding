@@ -5,7 +5,6 @@ const cacheHelper = {
     const cache = await this._openCache();
     cache.addAll(request);
   },
-
   async deleteOldCache() {
     const cacheNames = await caches.keys();
     cacheNames
@@ -44,4 +43,5 @@ const cacheHelper = {
   },
 };
 
+// eslint-disable-next-line no-irregular-whitespace
 export default cacheHelper;
