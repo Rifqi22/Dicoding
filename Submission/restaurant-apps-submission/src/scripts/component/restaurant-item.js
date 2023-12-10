@@ -1,18 +1,16 @@
-// import restaurant from '../../public/data/DATA.js';
-
 class RestaurantItem extends HTMLElement {
-  constructor(){
+  constructor() {
     super();
-    this.shadowDOM = this.attachShadow({mode: 'open'});
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
   }
-    set restaurant(restaurant) {
-      this._restaurant = restaurant;
-      this.render();
 
-    }
-   
-    render() {
-      this.shadowDOM.innerHTML = `
+  set restaurant(restaurant) {
+    this._restaurant = restaurant;
+    this.render();
+  }
+
+  render() {
+    this.shadowDOM.innerHTML = `
         <style>
 
         :root {
@@ -132,11 +130,9 @@ class RestaurantItem extends HTMLElement {
           </div>
           <p class="city" tabindex="0">${this._restaurant.city}</p>
           <p class="description" tabindex="0">${this._restaurant.description}</p>
-
-
         </div>
       `;
-    }
   }
+}
 
-  customElements.define('restaurant-item', RestaurantItem);
+customElements.define('restaurant-item', RestaurantItem);

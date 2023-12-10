@@ -1,18 +1,18 @@
-import './restaurant-item.js';
+import './restaurant-item';
 
 class RestaurantList extends HTMLElement {
-  constructor(){
+  constructor() {
     super();
-    this.shadowDOM = this.attachShadow({mode: 'open'});
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
   }
-    set restaurants(restaurants){
-        this._restaurants = restaurants;
-        this.render();
-    }
 
-    render() {
-        this.shadowDOM.innerHTML = 
-        `
+  set restaurants(restaurants) {
+    this._restaurants = restaurants;
+    this.render();
+  }
+
+  render() {
+    this.shadowDOM.innerHTML = `
         <style>
           
         
@@ -54,17 +54,16 @@ class RestaurantList extends HTMLElement {
           }
         }
         </style>
-        `
-        this._restaurants.forEach(restaurant => {
-          const restaurantItemElement = document.createElement('restaurant-item');
-          restaurantItemElement.restaurant = restaurant;
-          this.shadowDOM.appendChild(restaurantItemElement);
-        });
-    }
+        `;
+    this._restaurants.forEach((restaurant) => {
+      const restaurantItemElement = document.createElement('restaurant-item');
+      restaurantItemElement.restaurant = restaurant;
+      this.shadowDOM.appendChild(restaurantItemElement);
+    });
+  }
 
-    renderError(message) {
-        this.shadowDOM.innerHTML = 
-        `
+  renderError(message) {
+    this.shadowDOM.innerHTML = `
         <style>
         restaurant-list > .placeholder {
           font-weight: lighter;
@@ -76,8 +75,8 @@ class RestaurantList extends HTMLElement {
         }
       </>
         `;
-        this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`;
-      }
+    this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`;
+  }
 }
 
 customElements.define('restaurant-list', RestaurantList);

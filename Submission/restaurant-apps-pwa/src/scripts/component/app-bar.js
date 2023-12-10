@@ -264,6 +264,8 @@ class AppBar extends HTMLElement {
     menu.addEventListener('click', (event) => {
       drawer.classList.toggle('open');
       event.stopPropagation();
+      // Menghindari supaya hamburger tidak mengarah ke root domain setiap diklik
+      event.preventDefault();
     });
 
     hero.addEventListener('click', () => {

@@ -42,7 +42,7 @@ const Detail = {
         reviewList += `
               <div class='review' tabindex="0">
                 <div class="review_user_container" tabindex="0">
-                  <img class="review_user" src="./images/heros/icon/user.png" tabindex="0">
+                  <img class="review_user" src="./images/heros/icon/user.png" tabindex="0" alt="User Image">
                 </div>
                 <p class="review_name" tabindex="0">${review.name}<span tabindex="0" style="font-size: 10px; display:block">[${review.date}]</span></p>
                 <p tabindex="0">"${review.review}"</p>
@@ -58,7 +58,7 @@ const Detail = {
                 <div class="main_data" tabindex="0">
                   <h2 class="name" tabindex="0">${data.restaurant.name} | ${data.restaurant.rating}⭐️</h2>
                   <h3 class="address" tabindex="0"> ⟟ ${data.restaurant.address}, ${data.restaurant.city}</h3>
-                  <img class="restaurant-img" src="${CONFIG.BASE_IMAGE_URL + data.restaurant.pictureId}" alt="${data.restaurant.name}" title="${data.restaurant.name}" tabindex="0">
+                  <img class="restaurant-img" src="${CONFIG.BASE_IMAGE_URL + data.restaurant.pictureId}" alt="${data.restaurant.name}" title="${data.restaurant.name}" tabindex="0" crossorigin="anonymous">
                   <p class="description" tabindex="0">${data.restaurant.description}</p>
                 </div>
 

@@ -1,17 +1,17 @@
-class AppBar extends HTMLElement{
-    constructor(){
-        super();
-        this.shadowDOM = this.attachShadow({mode: 'open'})
-    };
+class AppBar extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
+  }
 
-    connectedCallback(){
-        this.render();
-        this.drawerFunction();
-        this.navbarFunction();
-    };
+  connectedCallback() {
+    this.render();
+    this.drawerFunction();
+    this.navbarFunction();
+  }
 
-    render(){
-        this.shadowDOM.innerHTML =`
+  render() {
+    this.shadowDOM.innerHTML = `
         <style>
             :root {
                 --primary-color: #fff45e;
@@ -29,27 +29,17 @@ class AppBar extends HTMLElement{
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             }
             .title {
-                padding: 16px
                 font-size: 40px;
                 text-align: left;
-                margin-left: 20px
+                margin-left: 20px;
             }
-
-            .skip-link {
-                position: absolute;
-                top: -40px;
-                left: 50%;
-                font-style: italic;
-                background-color: #bf1722;
-                color: white;
-                padding: 8px;
-                z-index: 100;
-              }
-               
-              .skip-link:focus {
-                 top: 0;
-              }
-
+            .title a{
+              text-decoration: none;
+              color: var(--secondary-color);
+            }
+            .title a:hover{
+              color: var(--primary-color);
+            }
               .header__menu{
                 font-size: 50px;
                 margin: 10px auto;
@@ -206,6 +196,14 @@ class AppBar extends HTMLElement{
                     font-size: 3em;
                     padding: 0;
                     margin: 20px 20px 0 20px;
+                    text-decoration: none;
+                }
+                .title a{
+                  text-decoration: none;
+                  color: var(--secondary-color);
+                }
+                .title a:hover{
+                  color: var(--primary-color);
                 }
                 #menu{
                     grid-column-start: 1;
@@ -224,62 +222,60 @@ class AppBar extends HTMLElement{
         </style>
 
         <!-- HTML  -->
-        <a href="#restaurant-list" class="skip-link">Go to Content</a>
-        <h1 class="title" tabindex="0"> El Food </h1>
 
+        <h1 class="title" tabindex="0"><a href="#/list-restaurants"> El Food </a></h1>
         <a id="menu" class="header__menu" href="#">☰</a>
         <nav id="drawer" class="nav">
           <ul class='nav__list'>
-            <li class="nav__item active" id="home"><a href='/index.html'>Home</a></li>
-            <li class="nav__item" id="favorite"><a href=#>Favorite</a></li>
+            <li class="nav__item active" id="home"><a href="#/list-restaurants">Home</a></li>
+            <li class="nav__item" id="favorite"><a href="#/like">Favorite</a></li>
             <li class="nav__item" id="about"><a href='https://rifqi22.github.io/rifqi-portofolio.github.io/' target='_blank'>About Us</a></li>
           </ul>
         </nav>
 
 
         `;
-    }
+  }
 
-    navbarFunction(){
-        const home = this.shadowDOM.querySelector('#home');
-        const favorite = this.shadowDOM.querySelector('#favorite');
+  navbarFunction() {
+    const home = this.shadowDOM.querySelector('#home');
+    const favorite = this.shadowDOM.querySelector('#favorite');
 
-        home.addEventListener('click', function (event){
-            home.classList.toggle('active');
-            event.stopPropagation();
-            favorite.classList.remove('active');
-        });
+    home.addEventListener('click', (event) => {
+      home.classList.toggle('active');
+      event.stopPropagation();
+      favorite.classList.remove('active');
+    });
 
-        favorite.addEventListener('click', function (event){
-            favorite.classList.toggle('active');
-            event.stopPropagation();
-            home.classList.remove('active');
-        });
-    }
+    favorite.addEventListener('click', (event) => {
+      favorite.classList.toggle('active');
+      event.stopPropagation();
+      home.classList.remove('active');
+    });
+  }
 
-    drawerFunction(){
-        // Function to hide and show burger menu
-        const drawer = this.shadowDOM.querySelector('#drawer');
-        const menu = this.shadowDOM.querySelector('#menu');
-        const hero = document.querySelector('hero-bar');
-        const body = document.querySelector('body');
+  drawerFunction() {
+    // Function to hide and show burger menu
+    const drawer = this.shadowDOM.querySelector('#drawer');
+    const menu = this.shadowDOM.querySelector('#menu');
+    const hero = document.querySelector('hero-bar');
+    const body = document.querySelector('body');
 
-        menu.addEventListener('click', function (event){
-            drawer.classList.toggle('open');
-            event.stopPropagation();
-        });
+    menu.addEventListener('click', (event) => {
+      drawer.classList.toggle('open');
+      event.stopPropagation();
+      // Menghindari supaya hamburger tidak mengarah ke root domain setiap diklik
+      event.preventDefault();
+    });
 
-        hero.addEventListener('click', function (){
-            drawer.classList.remove('open');
-        })
+    hero.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
 
-        body.addEventListener('click', function (){
-            drawer.classList.remove('open');
-        })
-
-    }
-
-
-};
+    body.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
+  }
+}
 
 customElements.define('app-bar', AppBar);
